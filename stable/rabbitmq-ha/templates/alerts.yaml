@@ -26,7 +26,7 @@ spec:
         installed_by: {{ .Release.Name }}
         severity: critical
 {{- if .Values.prometheus.operator.alerts.labels }}
-{{ toYaml .Values.prometheus.operator.alerts.labels | indent 10 }}
+{{ toYaml .Values.prometheus.operator.alerts.labels | indent 8 }}
 {{- end }}
       annotations:
         description: RabbitMQ {{`{{ $labels.namespace }}`}}/{{`{{ $labels.pod}}`}} is down
@@ -48,7 +48,7 @@ spec:
         installed_by: {{ .Release.Name }}
         severity: critical
 {{- if .Values.prometheus.operator.alerts.labels }}
-{{ toYaml .Values.prometheus.operator.alerts.labels | indent 10 }}
+{{ toYaml .Values.prometheus.operator.alerts.labels | indent 8 }}
 {{- end }}
       annotations:
         description: RabbitMQ {{`{{ $labels.namespace }}`}}/{{`{{ $labels.pod}}`}} Disk Space Alarm is going off.  Which means the node hit highwater mark and has cut off network connectivity, see RabbitMQ WebUI
@@ -60,7 +60,7 @@ spec:
         installed_by: {{ .Release.Name }}
         severity: critical
 {{- if .Values.prometheus.operator.alerts.labels }}
-{{ toYaml .Values.prometheus.operator.alerts.labels | indent 10 }}
+{{ toYaml .Values.prometheus.operator.alerts.labels | indent 8 }}
 {{- end }}
       annotations:
         description: RabbitMQ {{`{{ $labels.namespace }}`}}/{{`{{ $labels.pod}}`}} High Memory Alarm is going off.  Which means the node hit highwater mark and has cut off network connectivity, see RabbitMQ WebUI
@@ -72,7 +72,7 @@ spec:
         installed_by: {{ .Release.Name }}
         severity: critical
 {{- if .Values.prometheus.operator.alerts.labels }}
-{{ toYaml .Values.prometheus.operator.alerts.labels | indent 10 }}
+{{ toYaml .Values.prometheus.operator.alerts.labels | indent 8 }}
 {{- end }}
       annotations:
         description: RabbitMQ {{`{{ $labels.namespace }}`}}/{{`{{ $labels.pod}}`}} Memory Usage > 90%
@@ -84,7 +84,7 @@ spec:
         installed_by: {{ .Release.Name }}
         severity: critical
 {{- if .Values.prometheus.operator.alerts.labels }}
-{{ toYaml .Values.prometheus.operator.alerts.labels | indent 10 }}
+{{ toYaml .Values.prometheus.operator.alerts.labels | indent 8 }}
 {{- end }}
       annotations:
         description: RabbitMQ {{`{{ $labels.namespace }}`}}/{{`{{ $labels.pod}}`}} File Descriptor Usage > 90%
@@ -96,7 +96,7 @@ spec:
         installed_by: {{ .Release.Name }}
         severity: critical
 {{- if .Values.prometheus.operator.alerts.labels }}
-{{ toYaml .Values.prometheus.operator.alerts.labels | indent 10 }}
+{{ toYaml .Values.prometheus.operator.alerts.labels | indent 8 }}
 {{- end }}
       annotations:
         description: RabbitMQ {{`{{ $labels.namespace }}`}}/{{`{{ $labels.pod}}`}} will hit disk limit in the next hr based on last 15 mins trend.
